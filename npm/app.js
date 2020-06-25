@@ -11,17 +11,20 @@
 // URL HTTP
 
 const express = require("express");
-const { response } = require("express");
+//const { response } = require("express");
+//const { readFile } = require("fs");
 
 const app = express();
 
 app.get("/", (request, response) => {
-    if (err) {
-        response.status(500).send("sorry out of scope");
-    }
-    response.send(html);
-});
+    readFile("./index.html", "utf8", (err, html) => {
+        if (err) {
+            response.status(500).send("sorry out of scope");
+        }
+        response.send(html);
+    });
 
-app.listen(process.env.PORT || 3000, () =>
-    console.log(`App available on http://localhost/:3000`)
-);
+    app.listen(process.env.PORT || 8000, () =>
+        console.log(`App available on http://localhost/:8000`)
+    );
+});
