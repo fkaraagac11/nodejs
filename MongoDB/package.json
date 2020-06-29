@@ -1,14 +1,18 @@
 {
-  "name": "mng",
-  "version": "1.11.111",
-  "description": "",
-  "main": "mongo_prj.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "mongodb": "^3.5.9"
-  }
+    "name": "mng",
+    "version": "1.11.111",
+    "description": "",
+    "main": "mongo_prj.js",
+    "scripts": {
+        "dev": "nodemon mongo_prj.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "babel": "^6.23.0",
+        "mongodb": "^3.5.9"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
 }
